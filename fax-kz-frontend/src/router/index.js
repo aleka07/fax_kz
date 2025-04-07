@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import CardView from '../views/CardView.vue';
+import CreateCardView from '../views/CreateCardView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,9 +21,15 @@ const router = createRouter({
     },
     {
       path: '/card/:username',
-      name: 'card',
+      name: 'cardView',
       component: CardView,
     },
+    {
+      path: '/create',         // URL-адрес этой страницы
+      name: 'createCard',    // Уникальное имя маршрута
+      component: CreateCardView // Компонент Vue, который нужно показать
+    }
+
   ],
 })
 
